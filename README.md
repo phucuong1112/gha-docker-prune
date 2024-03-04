@@ -17,7 +17,7 @@ This action serves as a straightforward wrapper for the Docker Hub API, aimed at
 ## Example Usage
 
 ```yaml
-- uses: ./
+- uses: phucuong1112/gha-docker-prune@v1.0.0
   with:
     docker_username: ${{ secrets.DOCKER_USER }}
     docker_token: ${{ secrets.DOCKER_TOKEN }}
