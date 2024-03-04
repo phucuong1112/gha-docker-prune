@@ -1,0 +1,29 @@
+name: "Prune docker tags"
+description: "Prune tags in private docker hub"
+inputs:
+  docker_username:
+    description: "username in docker"
+    required: true
+  docker_token:
+    description: "token in docker"
+    required: true
+  docker_api_url:
+    description: "docker api's base url"
+    default: "https://hub.docker.com/v2"
+    required: false
+  docker_namespace:
+    description: "target docker namespace"
+    required: true
+  docker_repository:
+    description: "target docker repository"
+    required: true
+  keep:
+    description: "number of latest tag to keep"
+    default: '10'
+    required: true
+  include_tags:
+    description: "filter tags by regular expression"
+    required: true
+runs:
+  using: "node20"
+  main: "dist/index.js"
