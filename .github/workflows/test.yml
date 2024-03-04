@@ -12,15 +12,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: ./
-        with:
-          docker_username: ${{ secrets.DOCKER_USER }}
-          docker_token: ${{ secrets.DOCKER_TOKEN }}
-          docker_namespace: "juliesoft"
-          docker_repository: "julie-api"
-          keep: "3"
-          include_tags: |-
-            ^v[0-9]+\.[0-9]+\.[0-9]+-prod\.[0-9]+$
-            ^v[0-9]+\.[0-9]+\.[0-9]+-uat\.[0-9]+$
-            ^v[0-9]+\.[0-9]+\.[0-9]+$
-            ^latest$
+      # - uses: ./
+      #   with:
+      #     docker_username: ${{ secrets.DOCKER_USER }}
+      #     docker_token: ${{ secrets.DOCKER_TOKEN }}
+      #     docker_namespace: "juliesoft"
+      #     docker_repository: "julie-api"
+      #     keep: "3"
+      #     include_tags: |-
+      #       ^v[0-9]+\.[0-9]+\.[0-9]+-prod\.[0-9]+$
+      #       ^v[0-9]+\.[0-9]+\.[0-9]+-uat\.[0-9]+$
+      #       ^v[0-9]+\.[0-9]+\.[0-9]+$
+      #       ^latest$

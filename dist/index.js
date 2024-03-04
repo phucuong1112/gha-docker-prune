@@ -33478,14 +33478,14 @@ function testVersion(s, arrRegExp, caseSensitive = true) {
     .filter( t => testVersion(t.name, regexps, false))
     .sort( (a, b) => a.last_updated < b.last_updated);
 
-  sortedTags.forEach(x => console.log(`${x.name} - ${x.last_updated}`))
+  console.log('* List tags:')
+  sortedTags.forEach(x => console.log(`- ${x.name} - ${x.last_updated}`))
 
   let removeTags = keep > sortedTags.length ? [] : sortedTags.slice(keep);
   
-  removeTags.forEach(x => console.log(`${x.name} - ${x.last_updated}`))
-
+  console.log('* Remove tags:')
   for (const tag of removeTags) {
-    console.log(`- Deleting tag ${tag.name}`);
+    console.log(`- Removing tag ${tag.name}`);
     await dockerApi.deleteTag(dockerNamespace, dockerRepository, tag.name);
   }
 })();
