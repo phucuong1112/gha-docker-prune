@@ -1,0 +1,19 @@
+{
+  "name": "gha-docker-prune",
+  "version": "1.0.0",
+  "description": "Prune tags in private docker hub",
+  "main": "index.js",
+  "repository": "git@github.com:phucuong1112/gha-docker-prune.git",
+  "author": "cuongnp <phucuong1112@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist/"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "axios": "^1.6.7"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1"
+  }
+}
